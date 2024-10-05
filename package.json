@@ -1,0 +1,17 @@
+{
+  "name": "backendpractice",
+  "version": "1.0.0",
+  "description": "S. M. Montañez's backend activity for school",
+  "main": "index.js",
+  "scripts": {
+    "test": "node app"
+  },
+  "author": "S.M. Montañez",
+  "license": "ISC",
+  "dependencies": {
+    "bash": "^0.0.1",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.0",
+    "joi": "^17.13.3"
+  }
+}
