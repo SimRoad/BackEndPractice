@@ -18,4 +18,6 @@ router.post('/login', userController.loginUser);
 // Get user profile route
 router.get('/profile', authMiddleware, userController.getProfile);
 
+
+
 module.exports = router;
