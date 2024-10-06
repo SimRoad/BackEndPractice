@@ -28,36 +28,36 @@ document.getElementById('loginForm').addEventListener('submit', async (event) =>
     });
 
     const result = await response.json();
-    
+
     console.log("Login Response:", result); // Debugging line
     alert(result.message);
 
     // Store the username in local storage for future requests
     if (result.token) {
         localStorage.setItem('username', username);
-        alert('Logged in successfully!');
-    } else {
-        alert('Login failed, no token received.');
+        // Automatically fetch profile after successful login
+        fetchProfile(username);
+        /*you did this because b4 you had a get profile button and
+        you could change the token to another user's*/
     }
 });
 
-// Handle fetching the user profile
-document.getElementById('profileButton').addEventListener('click', async () => {
-    const username = localStorage.getItem('username');
-    if (!username) {
-        alert('You need to log in first!');
-        return;
-    }
-
+// Function to fetch the user profile
+async function fetchProfile(username) {
     const response = await fetch(`http://localhost:3000/profile`, {
         method: 'GET',
         headers: { 'x-username': username }
     });
 
     const result = await response.json();
+    
     if (response.ok) {
-        document.getElementById('profileResult').innerText = JSON.stringify(result);
+        const profileContainer = document.getElementById('profileResult');
+        profileContainer.innerHTML = `
+        <p><b>Username:</b> ${result.user.username}</p>
+        <p><b>Email:</b> ${result.user.email}</p>
+        `;
     } else {
         alert(`Error fetching profile: ${result.message}`);
     }
-});
+}

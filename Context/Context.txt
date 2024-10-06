@@ -1,0 +1,36 @@
+October 10, 2024: Hi future me (and probs Sir, this isn't for you though). Hopefully you come back here one day to improve upon it so you can become a better FullStack Dev. I saved the original activity with this so you have better context. Also a list to improve upon
+- Finish your JS course >:C you're on ch 2/6 
+- Know better the flow and innerworking of... node (see you're still not even sure what to call this space)
+- get familiar with the packages you used here and then more
+- learn to validate (use JOI) and rate limit, *yourself* 
+- Don't use Mocha one day (but she does have great history)
+
+- Remember your terms(you're bad at those):
+    + API - "can be thought of as a contract of service between two applications. This contract defines how the two communicate with each other using requests and responses.
+        - In this case, its to call your routes that link back to the functions to handle or respond your requests.
+
+    + JSON - "JavaScript Object Notation"
+        - A string format easy for humans and computers to understand
+        - what a computer can do with it v
+
+    + Parse - "analyze (a string or text) into logical syntactic components, typically in order to test conformability to a logical grammar."
+        - usually a JSON file in the string in question (thought tbh a json file in just a txt file, json is just a format) to a object
+    
+    + Middleware - "software that lies between an operating system and the applications running on it"
+        - "Middleware in web development, particularly in frameworks like Express.js, refers to functions that sit between the incoming request and the final route handler, allowing you to process, modify, or respond to the request before it reaches its intended destination."
+        - "If it's not Frontend or Backend, its the Middleware" - Mr Velayo 
+        - The stop b4 the backend, it can do:
+            - authentication
+            - data validation
+            - logging of request
+            - and more
+    
+    + Frontend - 0-0 U-U 0-0
+        - "refers to the client-side part of a web application or website that users interact with directly. It encompasses everything that users experience visually in their web browsers, including the layout, design, and interactive elements."
+        - Not only for layouts but since it runs on the client's computer, you can make functions (like encryptions) to run on it before it head to the server (your backend). Significantly lessening the weight of the server.
+        - Can work with your Middleware especially to authenticate or validate smth
+
+    + Backend - Your server
+        - Where it manages your data and how it handles it
+        - authentication happens here if you want to be extra careful
+        - das why ismis is slow c:

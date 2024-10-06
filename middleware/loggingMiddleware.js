@@ -10,3 +10,13 @@ const loggingMiddleware = (req, res, next) => {
 };
 
 module.exports = loggingMiddleware;
+
+/*
+OPTIONS request probably exist of the 
+CORS Checks: It helps in determining if a cross-origin request (a 
+request made from a different domain) is permitted by the server, 
+ensuring that web applications can securely interact with resources 
+from other origins.
+cause I requested from my browser
+*/
+

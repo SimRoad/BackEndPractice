@@ -18,3 +18,5 @@ module.exports = {
     registerSchema,
     loginSchema,
 };
+
+//Gave up ;-; but its for future reference when I get better

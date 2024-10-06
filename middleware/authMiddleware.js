@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+//these are built-in modules in node
 
 const usersDataPath = path.join(__dirname, '../data/MOCK_DATA.json');
 
@@ -12,6 +13,7 @@ const readUsersFromFile = () => {
 const authMiddleware = (req, res, next) => {
     console.log('Incoming Headers:', req.headers);
     const username = req.headers['x-username']; // Simulate token using headers (you can also use JWT in a real app)
+    // you do not know how to use JWT though
     
     // Load existing users
     const users = readUsersFromFile();

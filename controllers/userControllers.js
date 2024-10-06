@@ -22,7 +22,10 @@ const registerUser = (req, res) => {
     // Check for existing user
     const existingUser = users.find(user => user.email === email || user.username === username);
     if (existingUser) {
-        return res.status(400).json({ message: 'User already exists' });
+        const whatExist = existingUser.email === email 
+        ? 'Email' 
+        : 'Username';
+        return res.status(400).json({ message: `${whatExist} already exists` });
     }
 
     // Create new user
@@ -41,15 +44,18 @@ const loginUser = (req, res) => {
     
     // Find user by username
     const user = users.find(user => user.username === username);
+    //such a nifty js thing :>
     
     if (!user || user.password !== password) {
         return res.status(401).json({ message: 'Invalid username or password' });
+        //better not specify to brute forces what they got wrong
     }
 
     // On successful login, return the username as a token
     res.status(200).json({
         message: 'Login successful',
         token: user.username // Simulate token by using username
+        //though that can be edited so that's why it's usually encrypted
     });
 };
 
